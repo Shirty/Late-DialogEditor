@@ -31,12 +31,12 @@ if not os.path.exists(options.white_dialog_filename):
 tree = ElementTree.parse(options.xml_file_name)
 root = tree.getroot()
 
-discussion_i = 0
-line_i = 0
 for act in root:
     for initiator in act:
+        discussion_i = 0
         for discussion in initiator:
             discussion_i += 1
+            line_i = 0
             for line in discussion:
                 # MAKE THE IMAGE
                 # Do not process special nodes

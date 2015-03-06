@@ -157,7 +157,7 @@
 			
 			<Discussion CurrentItem="Dogtoy">
 				<Mother>Why won't you stop crying, sweetie? You used to love these <c>shakers</c></Mother>
-					<break>A3_anim_ManSqueezeDogToy</break><!-- man squeezes toy, baby starts laughing-->
+					<Action>A3_anim_ManSqueezeDogToy</Action><!-- man squeezes toy, baby starts laughing-->
 				<Mother>Thank you! I don't know what's gotten into him today</Mother>
 				<Player>I know how it goes, I have two kids at home</Player>
 				<Mother>A family man! And a businessman from the looks of you</Mother>
@@ -165,30 +165,30 @@
 				<Mother>Tell me about it!</Mother>
 				<Mother>Listen, maybe your kids will get more joy out of these <c>shakers</c> than mine</Mother>
 				<Mother>Please take them</Mother>
-					<break>A3_func_AddShakers</break>
+					<Action>A3_func_AddShakers</Action>
 			</Discussion>
 			
 			<Discussion CurrentItem="Shakers">
-				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+				<Action>A3_anim_MotherSqueezeDogToy</Action><!--mother squeezing the dog toy, baby laughing-->
 			</Discussion>
 			
 			<Discussion CurrentItem="Baton">
-				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+				<Action>A3_anim_MotherSqueezeDogToy</Action><!--mother squeezing the dog toy, baby laughing-->
 			</Discussion>
 			
 			<Discussion CurrentItem="Cloak">
-				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+				<Action>A3_anim_MotherSqueezeDogToy</Action><!--mother squeezing the dog toy, baby laughing-->
 			</Discussion>
 			
 			<Discussion CurrentItem="Flower">
-				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+				<Action>A3_anim_MotherSqueezeDogToy</Action><!--mother squeezing the dog toy, baby laughing-->
 			</Discussion>		
 		</Mother>
 		
 		<!--Children Dialogue-->
 		<Children>
 			<Discussion CurrentItem="Stick">
-					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+					<Action>A3_func_faceTowardsPlayer</Action><!--the kids shoudl face the player as they're talking-->
 				<Children>We're playing witches and wizards!</Children>
 				<Player>You kids don't look like wizards...</Player>
 				<Children>Yeah we do!</Children>
@@ -196,7 +196,7 @@
 			</Discussion>
 				
 			<Discussion CurrentItem="Dogtoy">
-					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+					<Action>A3_func_faceTowardsPlayer</Action><!--the kids shoudl face the player as they're talking-->
 				<Children>We're playing withces and wizards!</Children>
 				<Player>You kids don't look like wizards...</Player>
 				<Children>Yeah we do!</Children>
@@ -204,7 +204,7 @@
 			</Discussion>
 			
 			<Discussion CurrentItem="Shakers">
-					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+					<Action>A3_func_faceTowardsPlayer</Action><!--the kids shoudl face the player as they're talking-->
 				<Children>We're playing withces and wizards!</Children>
 				<Player>You kids don't look like wizards...</Player>
 				<Children>Yeah we do!</Children>
@@ -212,29 +212,29 @@
 			</Discussion>
 			
 			<Discussion CurrentItem="Baton">
-					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+					<Action>A3_func_faceTowardsPlayer</Action><!--the kids shoudl face the player as they're talking-->
 				<Children>We're playing witches and wizards!</Children>
 				<Player>You kids don't look like wizards...</Player>
 				<Children>Yeah we do!</Children>
 				<Children>Look, Harry's got a hat, and I've got a cloak and everything!</Children>
 				<Player>You know, a real wizard always carries a wand...</Player>
 				<Player>Here, take this</Player>
-					<break>A3_anim_handBatonToKids</break>
+					<Action>A3_anim_handBatonToKids</Action>
 				<Children>Wow! Does it work?</Children>
 				<Player>Why don't you give it a shot?</Player>
-					<break>A3_anim_girlWaveBaton</break>
+					<Action>A3_anim_girlWaveBaton</Action>
 				<Children>Zap!</Children>
-					<break>A3_anim_playerFallDown</break>
-					<break>A3_anim_girlTurnToFriend</break>
+					<Action>A3_anim_playerFallDown</Action>
+					<Action>A3_anim_girlTurnToFriend</Action>
 				<Children>Oh my god! Did you see that?!</Children>
 				<Children>I'm a wizard, Harry!</Children>
 				<Children>Wah! jenny, please don't bewitch me!</Children>
-					<break>A3_anim_boyStartsRunningAndGirlChasesHim</break>
-					<break>A3_anim_cloakFloatToGround</break>
+					<Action>A3_anim_boyStartsRunningAndGirlChasesHim</Action>
+					<Action>A3_anim_cloakFloatToGround</Action>
 				<Children>Haha! Get back here Harry, I'm gonna turn you into a toad!</Children>
 				<Player>Hey girl, you dropped your cloak!</Player>
 				<Player>I don't think they're coming back</Player>
-					<break>A3_func_AddCloak</break>
+					<Action>A3_func_AddCloak</Action>
 				<Player>*sigh*</Player>
 				<Player>I miss my kids</Player>
 			</Discussion>
@@ -413,7 +413,7 @@
       <Discussion CurrentItem="Cloak">
 				<HomelessMan>Can you spare me some change? I'm freezing</HomelessMan>
 				<Player>Here, take this</Player>
-					<break>A3_anim_giveManCloak</break>
+					<Action>A3_anim_giveManCloak</Action>
 				<HomelessMan>… for me? God bless you son!</HomelessMan>
 				<HomelessMan>You are a good man</HomelessMan>
 				<Player>I don't know about that.</Player>
