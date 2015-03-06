@@ -59,8 +59,8 @@ for act in root:
                 font = ImageFont.truetype(options.font_name, options.font_size)
 
                 image_width, image_height = image.size
-                print "Image height: " + str(image_height)
-                print "Image width: " + str(image_width)
+                # print "Image height: " + str(image_height)
+                # print "Image width: " + str(image_width)
 
                 words = text.split()
                 wordI = 0
@@ -68,7 +68,7 @@ for act in root:
                 phrasesI = 0
 
                 text_width_limit = base_text_width_limit = image.size[0] - 2 * options.initial_text_offset[0]
-                print "Base text width limit: " + str(base_text_width_limit)
+                # print "Base text width limit: " + str(base_text_width_limit)
                 phrases.append(words[wordI])
                 text_width_limit -= font.getsize(words[wordI])[0]
                 wordI += 1
@@ -85,10 +85,10 @@ for act in root:
                     wordI += 1
 
                 text_height = sum([font.getsize(phrase)[1] for phrase in phrases])
-                print "Text height: " + str(text_height)
+                # print "Text height: " + str(text_height)
 
                 difference = image_height - (text_height + 2 * options.initial_text_offset[1])
-                print "Difference: " + str(difference)
+                # print "Difference: " + str(difference)
 
                 new_image = image.resize((image_width, image_height - difference), Image.LANCZOS)
                 draw = ImageDraw.Draw(new_image)
@@ -101,14 +101,15 @@ for act in root:
                     draw.text(write_position, phrase, font=font, fill=fill_color)
                     write_position[1] += draw.textsize(phrase, font=font)[1]
 
-                print "Length of each phrase: "
-                for phrase in phrases:
-                    print phrase + "// size: " + str(draw.textsize(phrase, font=font))
+                # print "Length of each phrase: "
+                # for phrase in phrases:
+                    # print phrase + "// size: " + str(draw.textsize(phrase, font=font))
 
-                print "New image size: " + str(new_image.size)
+                # print "New image size: " + str(new_image.size)
 
                 # Notice we increment before this is mainly for construct and xpath which uses 1 as the first index
                 act_name = act.tag
                 initiator_name = initiator.tag
                 line_i += 1
                 new_image.save(os.path.join(options.image_folder, act_name + "_" + initiator_name + "_" + str(discussion_i) + "_" + str(line_i) + ".png"))
+                print "Processing"
