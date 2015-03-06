@@ -1,0 +1,27 @@
+<Dialogue>
+
+	<Act1><!--Scene in the home talking to his wife-->
+    <Susan>
+			<Discussion CurrentItem="None">
+          <Action>A1_anim_Sunrise</Action><!--1.sky changes from black to white 2.shadows move-->
+				<Player>Dammit Susan! Why didn't you wake me up?</Player>
+				<Player>I'm going to be late!</Player>
+				<Susan>You've been working overtime all week, Larry, you are going to get burned out</Susan>
+				<Susan>I don't want the kids to see you like this</Susan>
+				<Player>The kids? Jeezus Susan, who do you think I'm doing this for?</Player>
+				<Player>If I'm late again for work my boss may have me fired!</Player>
+				<Player>How will we make ends meet then, huh?</Player>
+				<Susan>*Sigh*</Susan>
+				<Susan>You should get going, your next train is going to be here in a minute</Susan>
+				<Player>ONE MINUTE? I gotta run!</Player>
+					<Action>A1_anim_CameraZoomOut</Action><!--Camera zooms out from rooftops to show the whole building, with Larry standing at his door-->
+				<Susan>I love yo...</Susan>
+					<Action>A1_anim_DoorClose</Action>
+				<Door>*SLAM!*</Door>
+          <Action>A1_func_StartClock</Action>
+          <Action>GoToNextAct</Action>
+			</Discussion>
+		</Susan>
+  </Act1>
+
+</Dialogue>

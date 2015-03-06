@@ -1,0 +1,456 @@
+<Dialogue>
+
+	<Act1><!--Scene in the home talking to his wife-->
+    <Susan>
+			<Discussion CurrentItem="None">
+          <Action>A1_anim_Sunrise</Action><!--1.sky changes from black to white 2.shadows move-->
+				<Player>Dammit Susan! Why didn't you wake me up?</Player>
+				<Player>I'm going to be late!</Player>
+				<Susan>You've been working overtime all week, Larry, you are going to get burned out</Susan>
+				<Susan>I don't want the kids to see you like this</Susan>
+				<Player>The kids? Jeezus Susan, who do you think I'm doing this for?</Player>
+				<Player>If I'm late again for work my boss may have me fired!</Player>
+				<Player>How will we make ends meet then, huh?</Player>
+				<Susan>*Sigh*</Susan>
+				<Susan>You should get going, your next train is going to be here in a minute</Susan>
+				<Player>ONE MINUTE? I gotta run!</Player>
+					<Action>A1_anim_CameraZoomOut</Action><!--Camera zooms out from rooftops to show the whole building, with Larry standing at his door-->
+				<Susan>I love yo...</Susan>
+					<Action>A1_anim_DoorClose</Action>
+				<Door>*SLAM!*</Door>
+          <Action>A1_func_StartClock</Action>
+          <Action>GoToNextAct</Action>
+			</Discussion>
+		</Susan>
+	</Act1>
+		
+  <Act2><!--Scene at the station talking to the protester-->
+    <TimeRanOut>
+      <Discussion CurrentItem="None">
+        <Player>Shit! I'm late! </Player>
+        <Player>Maybe I can still catch the next train.</Player>
+      </Discussion>
+    </TimeRanOut>
+		
+    <Protester>
+      <Discussion CurrentItem="None">
+        <Player>What's going on here?</Player>
+        <Player>That train is the only way for me to get to work and I'm late enough as it is!</Player>
+        <Protester>Tough luck, brother.</Protester>
+        <Protester>The union has called for a strike until our people get...</Protester>
+        <Player>Yeah, yeah, whatever "brother"</Player>
+        <Player>Instead of telling me why you're so busy doing nothing, tell me how I can help you end these shenanigans so I can get back to work!</Player>
+          <Action>A2_anim_ProtesterHandsSign</Action>
+        <Protester>Pick up a sign and do your part, brother</Protester>
+          <Action>A2_anim_TakeSign</Action>
+          <Action>A2_anim_WalkAway</Action>
+        <Player>@#$@!</Player>
+        <Player>Those god damn good for nothing...</Player>
+          <Action>A2_anim_SmashSign</Action>
+        <Player>*Sigh*</Player>
+        <Player>I guess there's no way I'm getting to work today</Player>
+        <Player>...</Player>
+        <Player>What am I going to do now?</Player>
+        <Player>I can't just go home to Susan, not after the way I treated her...</Player>
+          <Action>A2_anim_LookAtStick</Action>
+          <Player>And what am I going to do with this $Color:Red stick> $Color:Black?</Player> <!--c tag indicates colored word -->
+          <NewItem>Stick</NewItem>
+          <Action>GoToNextAct</Action>
+      </Discussion>
+		</Protester>
+	</Act2>
+		
+	<Act3><!--Scene walking around the park talking to people-->
+		
+		<!-- dialogue for if the player gets too close to home before finishing the trading game-->
+		<WalkTooCloseToHome CurrentItem="None">
+			<Discussion>
+		        <Player>I don't think I can go home to Susan just yet</Player>
+		        <Player>Not after the way I just left</Player>
+		    </Discussion>
+		</WalkTooCloseToHome>
+		
+		<!--Bar Patrons dialogue-->
+		<BarPatron>
+			<Discussion CurrentItem="Stick">
+				<BarPatron>That was quite the display of frustration</BarPatron>
+				<BarPatron>Not getting to work either, are you?</BarPatron>
+				<Player>Not likely</Player>
+				<Player>Those damn railway workers don't understand the value of hard work</Player>
+				<BarPatron>Right!</BarPatron>
+				<BarPatron>People these days, they're just looking for handouts</BarPatron>
+				<BarPatron>I'm telling you, it's getting worse by the minute</BarPatron>
+				<BarPatron>Even now, some homeless man had the nerve to come ask me for money</BarPatron>
+				<Player>Well, at least you get to enjoy a beer on a weekday </Player>
+				<BarPatron>The one good thing to come out of this mess!</BarPatron>
+			</Discussion>
+			
+			<Discussion CurrentItem="DogToy">
+				<BarPatron>Damn these selfish lazy protestors, they don't know the value of hard work like we do</BarPatron>
+				<BarPatron>Bartender, another beer please!</BarPatron>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+				<BarPatron>Damn these selfish lazy protestors, they don't know the value of hard work like we do</BarPatron>
+				<BarPatron>Bartender, another beer please!</BarPatron>
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+				<BarPatron>Damn these selfish lazy protestors, they don't know the value of hard work like we do</BarPatron>
+				<BarPatron>Bartender, another beer please!</BarPatron>
+			</Discussion>
+			
+			<Discussion CurrentItem="Cloak">
+				<BarPatron>Damn these selfish lazy protestors, they don't know the value of hard work like we do</BarPatron>
+				<BarPatron>Bartender, another beer please!</BarPatron>
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				<BarPatron>Damn these selfish lazy protestors, they don't know the value of hard work like we do</BarPatron>
+				<BarPatron>Bartender, another beer please!</BarPatron>
+			</Discussion>
+		</BarPatron>
+		
+		<!--Florists dialogue-->
+		<Florist>
+			<Discussion CurrentItem="Stick">
+				<Florist>Morning sir! Can I interest you in some flowers?</Florist>
+				<Player>(something about no money for flowers)</Player>
+				<Florist>(affirming hard times, having to refuse homeless and giving flower)</Florist>
+				<Player>(what point of flower?)</Player>
+				<Florist>(help each other however we can, make it through hard times)</Florist>
+				<Player>(thank him, good day etc)</Player>
+			</Discussion>
+			
+			<Discussion CurrentItem="DogToy">
+				<Florist>Bussiness may be though, </Florist>
+				<Florist>but if we show each other a little kindness from time to time, I know we'll pull through</Florist>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+				<Florist>Bussiness may be though, </Florist>
+				<Florist>but if we show each other a little kindness from time to time, I know we'll pull through</Florist>
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+				<Florist>Bussiness may be though, </Florist>
+				<Florist>but if we show each other a little kindness from time to time, I know we'll pull through</Florist>
+			</Discussion>
+			
+			<Discussion CurrentItem="Cloak">
+				<Florist>Bussiness may be though, </Florist>
+				<Florist>but if we show each other a little kindness from time to time, I know we'll pull through</Florist>
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				<Florist>Bussiness may be though, </Florist>
+				<Florist>but if we show each other a little kindness from time to time, I know we'll pull through</Florist>
+			</Discussion>
+		</Florist>
+		
+		<!--Mothers dialogue-->
+		<Mother>
+			<Discussion CurrentItem="Stick">
+				<Mother>Hush now, stop your crying sweetie</Mother>
+				<Mother>For the love of God, just stop already</Mother>
+			</Discussion>
+			
+			<Discussion CurrentItem="Dogtoy">
+				<Mother>Why won't you stop crying, sweetie? You used to love these <c>shakers</c></Mother>
+					<break>A3_anim_ManSqueezeDogToy</break><!-- man squeezes toy, baby starts laughing-->
+				<Mother>Thank you! I don't know what's gotten into him today</Mother>
+				<Player>I know how it goes, I have two kids at home</Player>
+				<Mother>A family man! And a businessman from the looks of you</Mother>
+				<Player>Yeah, those two aren't always compatible...</Player>
+				<Mother>Tell me about it!</Mother>
+				<Mother>Listen, maybe your kids will get more joy out of these <c>shakers</c> than mine</Mother>
+				<Mother>Please take them</Mother>
+					<break>A3_func_AddShakers</break>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+			</Discussion>
+			
+			<Discussion CurrentItem="Cloak">
+				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				<break>A3_anim_MotherSqueezeDogToy</break><!--mother squeezing the dog toy, baby laughing-->
+			</Discussion>		
+		</Mother>
+		
+		<!--Children Dialogue-->
+		<Children>
+			<Discussion CurrentItem="Stick">
+					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+				<Children>We're playing witches and wizards!</Children>
+				<Player>You kids don't look like wizards...</Player>
+				<Children>Yeah we do!</Children>
+				<Children>Look, Harry's got a hat, and I've got a cloak and everything!</Children>
+			</Discussion>
+				
+			<Discussion CurrentItem="Dogtoy">
+					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+				<Children>We're playing withces and wizards!</Children>
+				<Player>You kids don't look like wizards...</Player>
+				<Children>Yeah we do!</Children>
+				<Children>Look, Harry's got a hat, and I've got a cloak and everything!</Children>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+				<Children>We're playing withces and wizards!</Children>
+				<Player>You kids don't look like wizards...</Player>
+				<Children>Yeah we do!</Children>
+				<Children>Look, Harry's got a hat, and I've got a cloak and everything!</Children>
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+					<break>A3_func_faceTowardsPlayer</break><!--the kids shoudl face the player as they're talking-->
+				<Children>We're playing witches and wizards!</Children>
+				<Player>You kids don't look like wizards...</Player>
+				<Children>Yeah we do!</Children>
+				<Children>Look, Harry's got a hat, and I've got a cloak and everything!</Children>
+				<Player>You know, a real wizard always carries a wand...</Player>
+				<Player>Here, take this</Player>
+					<break>A3_anim_handBatonToKids</break>
+				<Children>Wow! Does it work?</Children>
+				<Player>Why don't you give it a shot?</Player>
+					<break>A3_anim_girlWaveBaton</break>
+				<Children>Zap!</Children>
+					<break>A3_anim_playerFallDown</break>
+					<break>A3_anim_girlTurnToFriend</break>
+				<Children>Oh my god! Did you see that?!</Children>
+				<Children>I'm a wizard, Harry!</Children>
+				<Children>Wah! jenny, please don't bewitch me!</Children>
+					<break>A3_anim_boyStartsRunningAndGirlChasesHim</break>
+					<break>A3_anim_cloakFloatToGround</break>
+				<Children>Haha! Get back here Harry, I'm gonna turn you into a toad!</Children>
+				<Player>Hey girl, you dropped your cloak!</Player>
+				<Player>I don't think they're coming back</Player>
+					<break>A3_func_AddCloak</break>
+				<Player>*sigh*</Player>
+				<Player>I miss my kids</Player>
+			</Discussion>
+			
+			<!-- the kids have run off and are no longer in the scene, so there are no dialogue options for "cloak" or "flower"
+			<Discussion CurrentItem="Cloak">
+				
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				
+			</Discussion>
+			-->	
+		</Children>
+		
+		<!--Dog Owners dialogue-->
+		<DogOwner>
+      		<Discussion CurrentItem="Stick">
+				<Player>Trying to teach your dog how to fetch?</Player>
+				<DogOwner>yeah, ... </DogOwner>
+				<DogOwner>“trying”</DogOwner>
+				<Player>Here, try this one</Player>
+					<Action>A3_anim_GiveStickToDogOwner</Action>
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOwner>Ha! How did you know that would work?</DogOwner>
+				<DogOnwer>I've been trying to get that dumb dog to fetch all morning</DogOnwer>
+				<PLayer>I guess smart dogs only go after sticks worth fetching</PLayer>
+				<DogOnwer>Believe me, this ain't no smart dog</DogOnwer>
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOnwer>Here, take this, he lost interest in this a long time ago</DogOnwer>
+					<Action>A3_func_AddDogToy</Action> <!-- play "squee" sound on receiving dog toy-->
+				<Player>Did you just give me a <c>dog toy</c> as a gift?</Player>
+				<DogOwner>Well, you just gave my dog part of a protest sign</DogOwner>
+				<Player>heh, fair enough</Player>
+			</Discussion>
+			
+			<Discussion CurrentItem="DogToy">
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOnwer>Good boy, go get it!</DogOnwer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOnwer>Good boy, go get it!</DogOnwer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOnwer>Good boy, go get it!</DogOnwer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Cloak">
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOnwer>Good boy, go get it!</DogOnwer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+					<Action>A3_anim_DogOwnerThrowsStick</Action>
+				<DogOnwer>Good boy, go get it!</DogOnwer>
+			</Discussion>
+		</DogOwner>
+		
+		<!--Singers Dialogue-->
+		<Singer>
+			<Discussion CurrentItem="Stick">
+				<Singer>No, no, no!</Singer>
+				<Singer>This band will never sound good if you boys can't follow the rhythm I'm indicating</Singer>
+				<Singer>Let's try that again from the top!</Singer>
+			</Discussion>
+			
+			<Discussion CurrentItem="DogToy">
+				<Singer>No, no, no!</Singer>
+				<Singer>This band will never sound good if you boys can't follow the rhythm I'm indicating</Singer>
+				<Singer>Let's try that again from the top!</Singer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+				<Singer>No, no, no!</Singer>
+				<Singer>This band will never sound good if you boys can't follow the rhythm I'm indicating</Singer>
+				<Player>Why don't you try these?</Player>
+					<Action>A3_anim_giveSingerShakers</Action>
+					<Action>A3_anim_SingerShakesShakers</Action>
+				<Singer>Yeeeah, that hits the spot! Good job lads!</Singer>
+				<Singer>Thanks pall, you really helped us out there</Singer>
+				<Player>My pleasure, you guys were sounding good!</Player>
+				<Singer>Thank you!</Singer>
+				<Singer>You know what? Take this, I won't be needing it anymore</Singer>
+					<Action>A3_func_AddConductorsBaton</Action> 
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+				<Singer>Sounding good, boys!</Singer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Cloak">
+				<Singer>Sounding good, boys!</Singer>
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				<Singer>Sounding good, boys!</Singer>
+			</Discussion>
+		</Singer>
+		
+		<!--HotDogVendors Dialogue-->
+		<HotDogVendor>
+			<Discussion CurrentItem="Stick">
+				<HotDogVendor>Mornin' Sir! Want a hot dog?</HotDogVendor>
+				<Player>I don't have any cash...</Player>
+				<Player>I don't suppose you'll trade a hotdog for this <c>stick</c>?</Player>
+				<HotDogVendor>Ha! Times may be hard, pal, but I'm not that desperate!</HotDogVendor>
+			</Discussion>
+			
+			<Discussion CurrentItem="DogToy">
+				<HotDogVendor>Mornin' Sir! Want a hot dog?</HotDogVendor>
+				<Player>I don't have any cash...</Player>
+				<Player>I don't suppose you'll trade a hotdog for this <c>DogToy</c>?</Player>
+				<HotDogVendor>Ha! Times may be hard, pal, but I'm not that desperate!</HotDogVendor>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+				<HotDogVendor>Mornin' Sir! Want a hot dog?</HotDogVendor>
+				<Player>I don't have any cash...</Player>
+				<Player>I don't suppose you'll trade a hotdog for these <c>Shakers</c>?</Player>
+				<HotDogVendor>Ha! Times may be hard, pal, but I'm not that desperate!</HotDogVendor>
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+				<HotDogVendor>Mornin' Sir! Want a hot dog?</HotDogVendor>
+				<Player>I don't have any cash...</Player>
+				<Player>I don't suppose you'll trade a hotdog for a...</Player>
+				<Player>eeuhm... , I guess it's called a <c>conductor's stick</c>?</Player>
+				<HotDogVendor>Ha! Times may be hard, pal, but I'm not that desperate!</HotDogVendor>
+			</Discussion>
+			
+			<Discussion CurrentItem="Cloak">
+				<HotDogVendor>Mornin' Sir! Want a hot dog?</HotDogVendor>
+				<Player>I don't have any cash...</Player>
+				<Player>I don't suppose you'll trade a hotdog for this <c>cloak</c>?</Player>
+				<HotDogVendor>Ha! Times may be hard, pal, but I'm not that desperate!</HotDogVendor>
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				<HotDogVendor>Mornin' Sir! Want a hot dog?</HotDogVendor>
+				<Player>I don't have any cash...</Player>
+				<Player>I don't suppose you'll trade a hotdog for this <c>flower</c>?</Player>
+				<HotDogVendor>Ha! I'm flattered sir, but you should give that there to someone special</HotDogVendor>
+			</Discussion>
+		</HotDogVendor>
+		
+		<!--Homeless man dialgue-->
+		<HomelessMan>
+			<Discussion CurrentItem="Stick">
+				<HomelessMan>Can you spare me some change? I'm freezing</HomelessMan>
+				<Player>All I have is this <c>stick</c>...</Player>
+				<HomelessMan>Thanks, but that ain't gonna keep me warm now, is it?</HomelessMan>
+			</Discussion>
+			
+			<Discussion CurrentItem="DogToy">
+				<HomelessMan>Can you spare me some change? I'm freezing</HomelessMan>
+				<Player>All I have is this <c>dog toy</c>...</Player>
+				<HomelessMan>Thanks, but that ain't gonna keep me warm now, is it?</HomelessMan>
+			</Discussion>
+			
+			<Discussion CurrentItem="Shakers">
+				<HomelessMan>Can you spare me some change? I'm freezing</HomelessMan>
+				<Player>All I have is this <c>shakers</c>...</Player>
+				<HomelessMan>Thanks, but that ain't gonna keep me warm now, is it?</HomelessMan>
+			</Discussion>
+			
+			<Discussion CurrentItem="Baton">
+				<HomelessMan>Can you spare me some change? I'm freezing</HomelessMan>
+				<Player>All I have is this, eeuhm, <c>conductors stick</c>...</Player>
+				<HomelessMan>Thanks, but that ain't gonna keep me warm now, is it?</HomelessMan>
+			</Discussion>
+			
+      <Discussion CurrentItem="Cloak">
+				<HomelessMan>Can you spare me some change? I'm freezing</HomelessMan>
+				<Player>Here, take this</Player>
+					<break>A3_anim_giveManCloak</break>
+				<HomelessMan>… for me? God bless you son!</HomelessMan>
+				<HomelessMan>You are a good man</HomelessMan>
+				<Player>I don't know about that.</Player>
+				<HomelessMan>Well I sure do!</HomelessMan>
+				<HomelessMan>Folks tend to just run by without appreciating the people around them</HomelessMan>
+				<HomelessMan>But I've seen you roaming around the park, showing kindness to strangers</HomelessMan>
+				<Player>(this morning was one of those who ran by)</Player>
+				<Player>(deep non-cheasy line about hurrying all the time, putting people second like his wife and kids)</Player>
+				<HomelessMan>(non-cheasy consolation, affirmation that he's an A-ok dude and good dad probably)</HomelessMan>
+				<Player>(non-cheasy insight in that he has to go apologise to his wife)</Player>
+				<HomelessMan>I wish I could give you something in return but I'm afraid I don't have much...</HomelessMan>
+				<HomelessMan>Here, take this!</HomelessMan>
+          <Action>A3_anim_homelessManGivesFlower</Action>
+					<Action>A3_func_AddFlowers</Action> 
+			</Discussion>
+			
+			<Discussion CurrentItem="Flower">
+				<HomelessMan>(Thank you again!)</HomelessMan>
+			</Discussion>
+    </HomelessMan>
+		
+		
+	</Act3>
+		
+	<Act4><!--Scene at home talking to wife-->
+		<Susan>
+			<Discussion CurrentItem="Flower">
+          <Action>A4_anim_ringDoorbell</Action>
+				<Susan>Honey? You're late...</Susan>
+				<Player>I was</Player>
+				<Player>But now I'm home</Player>
+				<Susan>I...</Susan>
+          <Action>A4_anim_giveFlower</Action>
+				<Player>... I love you too</Player>
+					<Action>A1_anim_CameraFadeToBlack</Action>
+			</Discussion>
+		</Susan>
+	</Act4>
+
+</Dialogue>
