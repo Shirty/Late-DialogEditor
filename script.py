@@ -1,8 +1,11 @@
 from PIL import Image, ImageFont, ImageDraw
 from xml.etree import ElementTree
-import os.path, sys
+import os.path, sys, shutil
 
 import options
+# TODO: Need a way to figure out text_offset, should be possible with font size
+# TODO: Build in checker make sure we don't have extra characters etc
+# TODO: Make it so dialogs are smaller when one liners
 
 # Check everything we need is here
 if not os.path.exists(options.image_folder):
@@ -24,19 +27,13 @@ if not os.path.exists(options.white_dialog_filename):
     print "Could not find white dialog image!"
     sys.exit()
 
-# TODO: Need a way to figure out text_offset, should be possible with font size
-# TODO: Build in checker make sure we don't have extra characters etc
-# TODO: Make it so dialogs are smaller when one liners
-
 tree = ElementTree.parse(options.xml_file_name)
 root = tree.getroot()
 
+dialog_id = 0
 for act in root:
     for initiator in act:
-        discussion_i = 0
         for discussion in initiator:
-            discussion_i += 1
-            line_i = 0
             for line in discussion:
                 # MAKE THE IMAGE
                 # Do not process special nodes
@@ -108,8 +105,11 @@ for act in root:
                 # print "New image size: " + str(new_image.size)
 
                 # Notice we increment before this is mainly for construct and xpath which uses 1 as the first index
-                act_name = act.tag
-                initiator_name = initiator.tag
-                line_i += 1
-                new_image.save(os.path.join(options.image_folder, act_name + "_" + initiator_name + "_" + str(discussion_i) + "_" + str(line_i) + ".png"))
-                print "Processing"
+                new_image.save(os.path.join(options.image_folder, str(dialog_id) + ".png"))
+
+                line.attrib["dialog_id"] = str(dialog_id)
+                dialog_id += 1
+
+                print "Processed " + os.path.join(options.image_folder, str(dialog_id) + ".png")
+
+tree.write("dialogue_game.xml")
