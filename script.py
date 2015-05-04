@@ -95,6 +95,7 @@ for act in root:
 
                 write_position = [options.initial_text_offset[0], options.initial_text_offset[1]]
                 for phrase in phrases:
+                    write_position[0] = options.initial_text_offset[0] + ((float(base_text_width_limit) - font.getsize(phrase)[0]) / 2)
                     draw.text(write_position, phrase, font=font, fill=fill_color)
                     write_position[1] += draw.textsize(phrase, font=font)[1]
 
