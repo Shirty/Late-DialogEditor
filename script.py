@@ -81,7 +81,7 @@ for act in root:
                         phrases[phrasesI] = phrases[phrasesI] + " " + words[wordI]
                     wordI += 1
 
-                text_height = sum([font.getsize(phrase)[1] for phrase in phrases])
+                text_height = sum([(font.getsize(phrase)[1] + options.line_space) for phrase in phrases])
                 # print "Text height: " + str(text_height)
 
                 difference = image_height - (text_height + 2 * options.initial_text_offset[1])
@@ -97,7 +97,7 @@ for act in root:
                 for phrase in phrases:
                     write_position[0] = options.initial_text_offset[0] + ((float(base_text_width_limit) - font.getsize(phrase)[0]) / 2)
                     draw.text(write_position, phrase, font=font, fill=fill_color)
-                    write_position[1] += draw.textsize(phrase, font=font)[1]
+                    write_position[1] += (draw.textsize(phrase, font=font)[1] + options.line_space)
 
                 # print "Length of each phrase: "
                 # for phrase in phrases:
